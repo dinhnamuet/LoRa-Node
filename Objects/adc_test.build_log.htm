@@ -1,0 +1,315 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a a, aa, LIC=ZB4EI-TCCEB-12RLE-5X82W-GA9ND-QVDKA
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\PC\Desktop\beta\adc_test.uvprojx
+Project File Date:  01/19/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+adc_nam.c(2): warning: In file included from...
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+3 warnings generated.
+compiling adc_nam.c...
+dht11_nam.c(6): warning: In file included from...
+./systick_delay.h(4): warning: In file included from...
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+3 warnings generated.
+compiling dht11_nam.c...
+wdt_nam.c(5): warning: In file included from...
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+3 warnings generated.
+compiling wdt_nam.c...
+systick_delay.c(1): warning: In file included from...
+./systick_delay.h(4): warning: In file included from...
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+systick_delay.c(4): warning: no previous extern declaration for non-static variable 'counting' [-Wmissing-variable-declarations]
+    4 | volatile int counting = 0;
+      |              ^
+systick_delay.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    4 | volatile int counting = 0;
+      |          ^
+systick_delay.c(40): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+   40 | void SysTick_Handler(void) {
+      |      ^
+systick_delay.c(40): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   40 | void SysTick_Handler(void) {
+      | ^
+      | static 
+5 warnings generated.
+compiling systick_delay.c...
+lcd_hehe.c(2): warning: In file included from...
+./systick_delay.h(4): warning: In file included from...
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+lcd_hehe.c(84): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   84 |         for(i = 0; data[i] != '\0'; i++)
+      |                    ^~~~
+lcd_hehe.c(85): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   85 |                 send_to_lcd(data[i], DATA);
+      |                             ^~~~
+5 warnings generated.
+compiling lcd_hehe.c...
+main.c(9): warning: In file included from...
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+main.c(19): warning: no previous extern declaration for non-static variable 'tx_buff' [-Wmissing-variable-declarations]
+   19 | char tx_buff[40];
+      |      ^
+main.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   19 | char tx_buff[40];
+      | ^
+main.c(21): warning: no previous extern declaration for non-static variable 'myLoRa' [-Wmissing-variable-declarations]
+   21 | struct LoRa_Setup myLoRa;
+      |                   ^
+main.c(21): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   21 | struct LoRa_Setup myLoRa;
+      | ^
+5 warnings generated.
+compiling main.c...
+mesh_nam.c(22): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   22 |         buff[1] = (pkt.uid>>16) & 0xFF;
+      |         ^~~~
+mesh_nam.c(23): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   23 |         buff[2] = (pkt.uid>>8) & 0xFF;
+      |         ^~~~
+mesh_nam.c(24): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   24 |         buff[3] = pkt.uid & 0xFF;
+      |         ^~~~
+mesh_nam.c(26): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   26 |         buff[4] = pkt.destination_id>>24;
+      |         ^~~~
+mesh_nam.c(27): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   27 |         buff[5] = (pkt.destination_id>>16) & 0xFF;
+      |         ^~~~
+mesh_nam.c(28): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   28 |         buff[6] = (pkt.destination_id>>8) & 0xFF;
+      |         ^~~~
+mesh_nam.c(29): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   29 |         buff[7] = pkt.destination_id & 0xFF;
+      |         ^~~~
+mesh_nam.c(31): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   31 |         buff[8] = pkt.data_length;
+      |         ^~~~
+mesh_nam.c(35): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   35 |                 buff[BASE_DATA+i] = pkt.data[i];
+      |                 ^~~~
+mesh_nam.c(35): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   35 |                 buff[BASE_DATA+i] = pkt.data[i];
+      |                                     ^~~~~~~~
+mesh_nam.c(38): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   38 |         buff[BASE_TTL] = pkt.TTL;
+      |         ^~~~
+mesh_nam.c(59): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   59 |         foo.uid = (uint32_t)(buff[0]<<24 | buff[1]<<16 | buff[2]<<8 | buff[3]);
+      |                                            ^~~~
+mesh_nam.c(59): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   59 |         foo.uid = (uint32_t)(buff[0]<<24 | buff[1]<<16 | buff[2]<<8 | buff[3]);
+      |                                                          ^~~~
+mesh_nam.c(59): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   59 |         foo.uid = (uint32_t)(buff[0]<<24 | buff[1]<<16 | buff[2]<<8 | buff[3]);
+      |                                                                       ^~~~
+mesh_nam.c(60): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   60 |         foo.destination_id = (uint32_t)(buff[4]<<24 | buff[5]<<16 | buff[6]<<8 | buff[7]);
+      |                                         ^~~~
+mesh_nam.c(60): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   60 |         foo.destination_id = (uint32_t)(buff[4]<<24 | buff[5]<<16 | buff[6]<<8 | buff[7]);
+      |                                                       ^~~~
+mesh_nam.c(60): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   60 |         foo.destination_id = (uint32_t)(buff[4]<<24 | buff[5]<<16 | buff[6]<<8 | buff[7]);
+      |                                                                     ^~~~
+mesh_nam.c(60): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   60 |         foo.destination_id = (uint32_t)(buff[4]<<24 | buff[5]<<16 | buff[6]<<8 | buff[7]);
+      |                                                                                  ^~~~
+mesh_nam.c(61): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   61 |         foo.TTL = buff[BASE_TTL];
+      |                   ^~~~
+mesh_nam.c(62): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   62 |         foo.data_length = buff[8];
+      |                           ^~~~
+mesh_nam.c(66): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   66 |                  foo.data[i] = buff[BASE_DATA+i];
+      |                  ^~~~~~~~
+mesh_nam.c(66): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   66 |                  foo.data[i] = buff[BASE_DATA+i];
+      |                                ^~~~
+22 warnings generated.
+compiling mesh_nam.c...
+RTE/Device/STM32F103C8/system_stm32f10x.c(64): warning: In file included from...
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |             ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |     ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(408): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  408 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+      |         ^~~~~~~~~~~~~
+5 warnings generated.
+compiling system_stm32f10x.c...
+spi_driver.c(1): warning: In file included from...
+./spi_driver.h(5): warning: In file included from...
+./systick_delay.h(4): warning: In file included from...
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+spi_driver.c(56): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   56 |         while(tx_buffer[i] != '\0')
+      |               ^~~~~~~~~
+spi_driver.c(58): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   58 |                 spi_send_data(tx_buffer[i]);
+      |                               ^~~~~~~~~
+spi_driver.c(67): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   67 |         while(tx_buffer[i] != '\0')
+      |               ^~~~~~~~~
+spi_driver.c(69): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   69 |                 spi_send_data(tx_buffer[i]);
+      |                               ^~~~~~~~~
+7 warnings generated.
+compiling spi_driver.c...
+lora.c(2): warning: In file included from...
+./spi_driver.h(5): warning: In file included from...
+./systick_delay.h(4): warning: In file included from...
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+lora.c(85): warning: variable 'data' is used uninitialized whenever switch default is taken [-Wsometimes-uninitialized]
+   85 |                 default:
+      |                 ^~~~~~~
+lora.c(88): note: uninitialized use occurs here
+   88 |         LoRa_write(RegOpMode, data);
+      |                               ^~~~
+lora.c(61): note: initialize the variable 'data' to silence this warning
+   61 |         uint8_t data;
+      |                     ^
+      |                      = '\0'
+lora.c(223): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  223 |                         data[i] = LoRa_read(RegFifo);
+      |                         ^~~~
+5 warnings generated.
+compiling lora.c...
+linking...
+Program Size: Code=17776 RO-data=896 RW-data=0 ZI-data=1840  
+FromELF: creating hex file...
+".\Objects\adc_test.axf" - 0 Error(s), 63 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil::STM32F1xx_DFP@2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/PC/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/PC/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+
+   * Component: Keil::Device:Startup@1.0.0
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

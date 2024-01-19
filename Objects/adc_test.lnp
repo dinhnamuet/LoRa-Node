@@ -1,0 +1,16 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\systick_delay.o"
+".\objects\lcd_hehe.o"
+".\objects\adc_nam.o"
+".\objects\wdt_nam.o"
+".\objects\lora.o"
+".\objects\spi_driver.o"
+".\objects\mesh_nam.o"
+".\objects\dht11_nam.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\adc_test.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\adc_test.map" -o .\Objects\adc_test.axf
