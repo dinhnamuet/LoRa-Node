@@ -64,8 +64,7 @@ int main(void)
 		{
 			get_data();
 		}
-		delay_ms(600);
-		clear_lcd();
+		delay_ms(1000);
 	}
 }
 static double soil_mesurement(uint8_t channel)
