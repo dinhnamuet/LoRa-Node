@@ -14,6 +14,7 @@
 #include "wdt_nam.h"
 #include "lora.h"
 #include "mesh_nam.h"
+static volatile uint8_t rx_sig = 0;
 static double temperature, humidity;
 static double analog = 0;
 char tx_buff[40];
@@ -22,6 +23,7 @@ static volatile int RSSI;
 struct LoRa_Setup myLoRa;
 extern void SysTick_Handler(void);
 static double soil_mesurement(uint8_t channel);
+static void get_data(void);
 static uint8_t recv_data[50];
 void EXTI2_IRQHandler(void);
 int main(void)
@@ -58,7 +60,11 @@ int main(void)
 		lcd_goto_xy(0, 1);
 		lcd_display(buff_analog);
 		ping_to_wdt();
-		delay_ms(500);
+		if(rx_sig)
+		{
+			get_data();
+		}
+		delay_ms(600);
 		clear_lcd();
 	}
 }
@@ -72,6 +78,11 @@ static double soil_mesurement(uint8_t channel)
 }
 void EXTI2_IRQHandler(void)
 {
+	rx_sig = 1;
+	EXTI->PR |= (1UL<<2);
+}
+static void get_data(void)
+{
 	uint8_t r;
 //	RSSI = LoRa_getRSSI();
 	memset(tx_buff, '\0', 40);
@@ -82,5 +93,5 @@ void EXTI2_IRQHandler(void)
 	{
 		handler_rx_data(recv_data);
 	}
-	EXTI->PR |= (1UL<<2);
+	rx_sig = 0;
 }
