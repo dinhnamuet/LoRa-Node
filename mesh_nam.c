@@ -3,8 +3,10 @@
 #include <stdlib.h>
 #include "mesh_nam.h"
 #include "lora.h"
+#include "lcd_hehe.h"
+#define NODE_ID 20021164
 extern struct LoRa_Setup myLoRa;
-static uint8_t cache_buffer[PACKET_SIZE];
+uint8_t cache_buffer[PACKET_SIZE];
 extern char tx_buff[40];
 struct LoRa_packet default_packet(void)
 {
@@ -16,7 +18,7 @@ struct LoRa_packet default_packet(void)
 static void format_pkt(struct LoRa_packet pkt, uint8_t *buff)
 {
 	int i = 0;
-	memset(buff, 0, PACKET_SIZE);
+	memset(buff, 55, PACKET_SIZE);
 	// UID
 	buff[0] = pkt.uid>>24;
 	buff[1] = (pkt.uid>>16) & 0xFF;
@@ -45,7 +47,7 @@ static void mesh_send_pkt(struct LoRa_packet pkt)
 	memcpy(cache_buffer, to_send, PACKET_SIZE);
 	LoRa_transmit(&myLoRa, to_send, PACKET_SIZE, 1000);
 }
-static void mesh_send_pkt_no_cache(struct LoRa_packet pkt)
+void mesh_send_pkt_no_cache(struct LoRa_packet pkt)
 {
 	uint8_t to_send[PACKET_SIZE];
 	format_pkt(pkt, to_send);
@@ -76,7 +78,7 @@ void handler_rx_data(uint8_t *buff)
 	}
 	else if (foo.destination_id == NODE_ID)
 	{
-		if(strncmp((char *)cache_buffer, (char *)buff, 49)!= 0)
+		if(strncmp((char *)cache_buffer, (char *)buff, (PACKET_SIZE - 1))!= 0)
 		{
 			memset(cache_buffer, 0, PACKET_SIZE);
 			memcpy(cache_buffer, buff, PACKET_SIZE);
@@ -89,10 +91,6 @@ void handler_rx_data(uint8_t *buff)
 				mesh_send_pkt_no_cache(responses);
 			}
 		}
-	}
-	else
-	{
-		//do nothing
 	}
 	free(foo.data);
 }

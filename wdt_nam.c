@@ -10,7 +10,7 @@ void watchdog_init(void)
 	while(!(RCC->CSR & 0x02));
 	IWDG->KR = 0x5555;
 	while((IWDG->SR & (0x03)));
-	IWDG->PR	= 0x04;
+	IWDG->PR	= 0x06;
 	IWDG->RLR = 0xFFF;
 	IWDG->KR	= 0xCCCC;
 }

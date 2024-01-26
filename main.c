@@ -17,6 +17,7 @@
 static double temperature, humidity;
 static double analog = 0;
 char tx_buff[40];
+extern uint8_t cache_buffer[PACKET_SIZE];
 static volatile int RSSI;
 struct LoRa_Setup myLoRa;
 extern void SysTick_Handler(void);
@@ -42,8 +43,8 @@ int main(void)
 	lcd_display("Init success!");
 	LoRa_startReceiving(&myLoRa);
 	delay_ms(2000);
-	clear_lcd();
 	watchdog_init();
+	memset(cache_buffer, 97, PACKET_SIZE);
 	while(1)
 	{
 		read_data(&temperature, &humidity);
@@ -57,7 +58,8 @@ int main(void)
 		lcd_goto_xy(0, 1);
 		lcd_display(buff_analog);
 		ping_to_wdt();
-		delay_ms(1000);
+		delay_ms(500);
+		clear_lcd();
 	}
 }
 static double soil_mesurement(uint8_t channel)
@@ -71,12 +73,14 @@ static double soil_mesurement(uint8_t channel)
 void EXTI2_IRQHandler(void)
 {
 	uint8_t r;
-	RSSI = LoRa_getRSSI();
+//	RSSI = LoRa_getRSSI();
+	memset(tx_buff, '\0', 40);
+	sprintf(tx_buff, "%.2f %.2f %.2f", temperature, humidity, analog);
+	memset(recv_data, 0, 50);
 	r = LoRa_receive(&myLoRa, recv_data, PACKET_SIZE);
 	if(r)
 	{
-		memset(tx_buff, '\0', 40);
-		sprintf(tx_buff, "%.2f %.2f %.2f", temperature, humidity, analog);
 		handler_rx_data(recv_data);
 	}
+	EXTI->PR |= (1UL<<2);
 }

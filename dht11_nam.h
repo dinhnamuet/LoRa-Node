@@ -3,7 +3,6 @@
 #include <stdint.h>
 #define OUTPUT	1
 #define INPUT	0
-#define DHT22_PIN	0
 void dht11_init(void);
 int8_t read_data(double *tem, double *hum);
 double readTemperature(void);
