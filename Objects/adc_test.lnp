@@ -7,7 +7,7 @@
 ".\objects\lora.o"
 ".\objects\spi_driver.o"
 ".\objects\mesh_nam.o"
-".\objects\dht11_nam.o"
+".\objects\pwm.o"
 ".\objects\startup_stm32f10x_md.o"
 ".\objects\system_stm32f10x.o"
 --strict --scatter ".\Objects\adc_test.sct"

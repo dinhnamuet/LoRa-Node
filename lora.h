@@ -88,19 +88,6 @@ struct LoRa_Setup {
 #pragma pack()
 
 struct LoRa_Setup newLora(void);
-//void Lora_Reset(void);
-//void LoRa_readReg(uint8_t address, uint8_t *output);
-//void LoRa_writeReg(uint8_t address, uint8_t output);
-//void LoRa_gotoMode(struct LoRa_Setup *_LoRa, int mode);
-//uint8_t LoRa_read(uint8_t address);
-//void LoRa_write(uint8_t address, uint8_t value);
-//void LoRa_BurstWrite(uint8_t address, uint8_t *value);
-//uint8_t LoRa_isvalid(struct LoRa_Setup *_LoRa);
-//void LoRa_setFrequency(int freq);
-//void LoRa_setSpreadingFactor(int SF);
-//void LoRa_setPower(uint8_t power);
-//void LoRa_setOCP(uint8_t current);
-//void LoRa_setTOMsb_setCRCon(void);
 uint8_t LoRa_transmit(struct LoRa_Setup *_LoRa, uint8_t *data, uint8_t length, uint16_t timeout);
 void LoRa_startReceiving(struct LoRa_Setup *_LoRa);
 uint8_t LoRa_receive(struct LoRa_Setup *_LoRa, uint8_t *data, uint8_t length);
