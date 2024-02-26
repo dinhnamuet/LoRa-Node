@@ -10,4 +10,5 @@
   C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h \
   C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h \
   C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h \
-  systick_delay.h lcd_hehe.h adc_nam.h wdt_nam.h lora.h mesh_nam.h pwm.h
+  Inc\systick_delay.h Inc\lcd.h Inc\adc.h Inc\watchdog.h Inc\lora.h \
+  Inc\mesh.h Inc\pwm.h Inc\light_control.h

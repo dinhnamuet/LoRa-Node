@@ -8,12 +8,13 @@
 #include <stdlib.h>
 #include "stm32f10x.h"
 #include "systick_delay.h"
-#include "lcd_hehe.h"
-#include "adc_nam.h"
-#include "wdt_nam.h"
+#include "lcd.h"
+#include "adc.h"
+#include "watchdog.h"
 #include "lora.h"
-#include "mesh_nam.h"
+#include "mesh.h"
 #include "pwm.h"
+#include "light_control.h"
 const uint32_t NODE_ID = 20021165;
 
 static volatile uint8_t rx_sig = 0;
@@ -26,8 +27,7 @@ static void get_data(void);
 static uint8_t recv_data[50];
 void EXTI2_IRQHandler(void);
 struct LoRa_node myNode;
-static void manual_mode(struct time_set foo, uint8_t *duty_cycle);
-static void auto_mode(uint32_t light_sensor, uint8_t *duty_cycle);
+
 int main(void)
 {
 	uint8_t last_dt = 0;
@@ -92,18 +92,21 @@ int main(void)
 		memset(buffer, 0,50);
 		sprintf(buffer, (myNode.current_mode == MODE_AUTO) ? "Auto, %d" : "Manual, %d", myNode.illuminance);
 		lcd_display(buffer);
-		
+		/* start task 1 */
 		if(rx_sig)
 		{
 			get_data();
 		}
+		/* end task 1 */
+		/* start task 2 */
 		if(myNode.current_mode == MODE_AUTO)
-			auto_mode(myNode.light_sensor_value, &myNode.illuminance);
+			myNode.illuminance = getDutyCycle_Auto(myNode.light_sensor_value);
 		else if(myNode.current_mode == MODE_MANUAL)
-			manual_mode(timeSetting, &myNode.illuminance);
+			myNode.illuminance = getDutyCycle_Manual(timeSetting);
 		if(myNode.illuminance != last_dt)
 			pwm_setDutyCycle(myNode.illuminance);
 		last_dt = myNode.illuminance;
+		/* end task 2 */
 		delay_ms(1000);
 	}
 }
@@ -125,112 +128,4 @@ static void get_data(void)
 	}
 	rx_sig = 0;
 }
-static void manual_mode(struct time_set foo, uint8_t *duty_cycle)
-{
-	/* Illuminance 0% */
-	if(foo.h_start_0 < foo.h_stop_0)
-	{
-		if(foo.h_start_0 <= curTime.hour && foo.h_stop_0 >= curTime.hour && foo.m_start_0 <= curTime.minutes && foo.m_stop_0 >= curTime.minutes)
-			*duty_cycle = 0;
-	}
-	else if(foo.h_start_0 > foo.h_stop_0)
-	{
-		if(( (foo.h_start_0 <= curTime.hour) && (foo.m_start_0 <= curTime.minutes) ) || ( (foo.h_stop_0 >= curTime.hour) && (foo.m_stop_0 >= curTime.minutes) ))
-			*duty_cycle = 0;
-	}
-	else
-	{
-		if(foo.m_start_0 < foo.m_stop_0)
-		{
-			if(foo.h_start_0 <= curTime.hour && foo.h_stop_0 >= curTime.hour && foo.m_start_0 <= curTime.minutes && foo.m_stop_0 >= curTime.minutes)
-				*duty_cycle = 0;
-		}
-		else
-		{
-			if(( (foo.h_start_0 <= curTime.hour) && (foo.m_start_0 <= curTime.minutes) ) || ( (foo.h_stop_0 >= curTime.hour) && (foo.m_stop_0 >= curTime.minutes) ))
-			*duty_cycle = 0;
-		}
-	}
-	
-	/* Illuminance 50% */
-	if(foo.h_start_50 < foo.h_stop_50)
-	{
-		if(foo.h_start_50 <= curTime.hour && foo.h_stop_50 >= curTime.hour && foo.m_start_50 <= curTime.minutes && foo.m_stop_50 >= curTime.minutes)
-			*duty_cycle = 50;
-	}
-	else if(foo.h_start_50 > foo.h_stop_50)
-	{
-		if(( (foo.h_start_50 <= curTime.hour) && (foo.m_start_50 <= curTime.minutes) ) || ( (foo.h_stop_50 >= curTime.hour) && (foo.m_stop_50 >= curTime.minutes) ))
-			*duty_cycle = 50;
-	}
-	else
-	{
-		if(foo.m_start_50 < foo.m_stop_50)
-		{
-			if(foo.h_start_50 <= curTime.hour && foo.h_stop_50 >= curTime.hour && foo.m_start_50 <= curTime.minutes && foo.m_stop_50 >= curTime.minutes)
-				*duty_cycle = 50;
-		}
-		else
-		{
-			if(( (foo.h_start_50 <= curTime.hour) && (foo.m_start_50 <= curTime.minutes) ) || ( (foo.h_stop_50 >= curTime.hour) && (foo.m_stop_50 >= curTime.minutes) ))
-			*duty_cycle = 50;
-		}
-	}
-	
-	/* Illuminance 75% */
-	if(foo.h_start_75 < foo.h_stop_75)
-	{
-		if(foo.h_start_75 <= curTime.hour && foo.h_stop_75 >= curTime.hour && foo.m_start_75 <= curTime.minutes && foo.m_stop_75 >= curTime.minutes)
-			*duty_cycle = 75;
-	}
-	else if(foo.h_start_75 > foo.h_stop_75)
-	{
-		if(( (foo.h_start_75 <= curTime.hour) && (foo.m_start_75 <= curTime.minutes) ) || ( (foo.h_stop_75 >= curTime.hour) && (foo.m_stop_75 >= curTime.minutes) ))
-			*duty_cycle = 75;
-	}
-	else
-	{
-		if(foo.m_start_75 < foo.m_stop_75)
-		{
-			if(foo.h_start_75 <= curTime.hour && foo.h_stop_75 >= curTime.hour && foo.m_start_75 <= curTime.minutes && foo.m_stop_75 >= curTime.minutes)
-				*duty_cycle = 75;
-		}
-		else
-		{
-			if(( (foo.h_start_75 <= curTime.hour) && (foo.m_start_75 <= curTime.minutes) ) || ( (foo.h_stop_75 >= curTime.hour) && (foo.m_stop_75 >= curTime.minutes) ))
-			*duty_cycle = 75;
-		}
-	}
-	
-	/* Illuminance 100% */
-	if(foo.h_start_100 < foo.h_stop_100)
-	{
-		if(foo.h_start_100 <= curTime.hour && foo.h_stop_100 >= curTime.hour && foo.m_start_100 <= curTime.minutes && foo.m_stop_100 >= curTime.minutes)
-			*duty_cycle = 100;
-	}
-	else if(foo.h_start_100 > foo.h_stop_100)
-	{
-		if(( (foo.h_start_100 <= curTime.hour) && (foo.m_start_100 <= curTime.minutes) ) || ( (foo.h_stop_100 >= curTime.hour) && (foo.m_stop_100 >= curTime.minutes) ))
-			*duty_cycle = 100;
-	}
-	else
-	{
-		if(foo.m_start_100 < foo.m_stop_100)
-		{
-			if(foo.h_start_100 <= curTime.hour && foo.h_stop_100 >= curTime.hour && foo.m_start_100 <= curTime.minutes && foo.m_stop_100 >= curTime.minutes)
-				*duty_cycle = 100;
-		}
-		else
-		{
-			if(( (foo.h_start_100 <= curTime.hour) && (foo.m_start_100 <= curTime.minutes) ) || ( (foo.h_stop_100 >= curTime.hour) && (foo.m_stop_100 >= curTime.minutes) ))
-			*duty_cycle = 100;
-		}
-	}
-}
-static void auto_mode(uint32_t light_sensor, uint8_t *duty_cycle)
-{
-	if(light_sensor <= 2000)
-		*duty_cycle = 50;
-	else
-		*duty_cycle = 0;
-}
+

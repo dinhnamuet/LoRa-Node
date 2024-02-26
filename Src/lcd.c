@@ -1,4 +1,4 @@
-#include "lcd_hehe.h"
+#include "lcd.h"
 #include "systick_delay.h"
 #include <string.h>
 #include <stdlib.h>

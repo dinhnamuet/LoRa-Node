@@ -1,4 +1,4 @@
-#include "adc_nam.h"
+#include "adc.h"
 #include "stm32f10x.h"
 #include "systick_delay.h"
 #define set_bit(port, bit) port|=(1UL<<bit)

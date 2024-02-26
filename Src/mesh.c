@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "mesh_nam.h"
+#include "mesh.h"
 #include "lora.h"
-#include "lcd_hehe.h"
 #include "systick_delay.h"
 extern const uint32_t NODE_ID;
 extern struct LoRa_Setup myLoRa;

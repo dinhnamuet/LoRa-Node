@@ -1,7 +1,7 @@
 /*
 	implement watchdog driver 
 */
-#include "wdt_nam.h"
+#include "watchdog.h"
 #include "stm32f10x.h"
 #include "systick_delay.h"
 void watchdog_init(void)

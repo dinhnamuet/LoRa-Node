@@ -17,20 +17,28 @@ Library Manager: ArmAr.exe V6.21
 Hex Converter:   FromElf.exe V6.21
 CPU DLL:         SARMCM3.DLL V5.39.0.0
 Dialog DLL:      DCM.DLL V1.17.5.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Target DLL:      UL2CM3.DLL V1.164.9.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-C:\Users\Pc\Desktop\LoRa-Node\adc_test.uvprojx
-Project File Date:  02/23/2024
+C:\Users\Pc\Desktop\LoRa-Node\Light_System.uvprojx
+Project File Date:  02/27/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
-compiling lcd_hehe.c...
+compiling pwm.c...
+compiling light_control.c...
+compiling watchdog.c...
+compiling adc.c...
+compiling systick_delay.c...
 compiling main.c...
+compiling spi_driver.c...
+compiling lcd.c...
+compiling mesh.c...
+compiling lora.c...
 linking...
-Program Size: Code=15376 RO-data=788 RW-data=4 ZI-data=1868  
+Program Size: Code=15908 RO-data=788 RW-data=4 ZI-data=1868  
 FromELF: creating hex file...
 ".\Objects\adc_test.axf" - 0 Error(s), 0 Warning(s).
 
@@ -59,11 +67,11 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE@6.0.0
 
    * Component: Keil::Device:Startup@1.0.0
+      Include file:  RTE_Driver/Config/RTE_Device.h
       Source file:   Device/Source/ARM/startup_stm32f10x_md.s
       Source file:   Device/Source/system_stm32f10x.c
-      Include file:  RTE_Driver/Config/RTE_Device.h
       Source file:   Device/Source/ARM/STM32F1xx_OPT.s
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>

@@ -1,4 +1,4 @@
-./objects/systick_delay.o: systick_delay.c systick_delay.h \
+./objects/systick_delay.o: Src\systick_delay.c Inc\systick_delay.h \
   C:\Keil_v5\ARM\ARMCLANG\include\stdint.h \
   C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h \
   RTE\_Target_1\RTE_Components.h \

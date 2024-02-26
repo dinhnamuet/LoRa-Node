@@ -1,5 +1,5 @@
-#ifndef __LCD_HEHE_H__
-#define __LCD_HEHE_H__
+#ifndef __LCD_H__
+#define __LCD_H__
 #include <stdint.h>
 
 #define SET(port,bit)			port|=(1U<<bit)

@@ -382,92 +382,171 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
+          <GroupName>programming</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>2</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath>.\Inc</IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
           <Files>
             <File>
-              <FileName>main.c</FileName>
+              <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
+              <FilePath>.\Src\adc.c</FilePath>
             </File>
             <File>
-              <FileName>systick_delay.c</FileName>
+              <FileName>lcd.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\systick_delay.c</FilePath>
+              <FilePath>.\Src\lcd.c</FilePath>
             </File>
             <File>
-              <FileName>systick_delay.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\systick_delay.h</FilePath>
-            </File>
-            <File>
-              <FileName>lcd_hehe.c</FileName>
+              <FileName>light_control.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\lcd_hehe.c</FilePath>
-            </File>
-            <File>
-              <FileName>lcd_hehe.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\lcd_hehe.h</FilePath>
-            </File>
-            <File>
-              <FileName>adc_nam.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\adc_nam.c</FilePath>
-            </File>
-            <File>
-              <FileName>adc_nam.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\adc_nam.h</FilePath>
-            </File>
-            <File>
-              <FileName>wdt_nam.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\wdt_nam.h</FilePath>
-            </File>
-            <File>
-              <FileName>wdt_nam.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\wdt_nam.c</FilePath>
+              <FilePath>.\Src\light_control.c</FilePath>
             </File>
             <File>
               <FileName>lora.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\lora.c</FilePath>
+              <FilePath>.\Src\lora.c</FilePath>
             </File>
             <File>
-              <FileName>lora.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\lora.h</FilePath>
-            </File>
-            <File>
-              <FileName>spi_driver.c</FileName>
+              <FileName>mesh.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\spi_driver.c</FilePath>
-            </File>
-            <File>
-              <FileName>spi_driver.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\spi_driver.h</FilePath>
-            </File>
-            <File>
-              <FileName>mesh_nam.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\mesh_nam.h</FilePath>
-            </File>
-            <File>
-              <FileName>mesh_nam.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\mesh_nam.c</FilePath>
+              <FilePath>.\Src\mesh.c</FilePath>
             </File>
             <File>
               <FileName>pwm.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\pwm.c</FilePath>
+              <FilePath>.\Src\pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi_driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Src\spi_driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>systick_delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Src\systick_delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>watchdog.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Src\watchdog.c</FilePath>
+            </File>
+            <File>
+              <FileName>adc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Inc\adc.h</FilePath>
+            </File>
+            <File>
+              <FileName>lcd.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Inc\lcd.h</FilePath>
+            </File>
+            <File>
+              <FileName>light_control.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Inc\light_control.h</FilePath>
+            </File>
+            <File>
+              <FileName>lora.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Inc\lora.h</FilePath>
+            </File>
+            <File>
+              <FileName>mesh.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Inc\mesh.h</FilePath>
             </File>
             <File>
               <FileName>pwm.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\pwm.h</FilePath>
+              <FilePath>.\Inc\pwm.h</FilePath>
+            </File>
+            <File>
+              <FileName>spi_driver.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Inc\spi_driver.h</FilePath>
+            </File>
+            <File>
+              <FileName>systick_delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Inc\systick_delay.h</FilePath>
+            </File>
+            <File>
+              <FileName>watchdog.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Inc\watchdog.h</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -524,5 +603,14 @@
       </file>
     </files>
   </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>adc_test</LayName>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>
