@@ -499,51 +499,6 @@
               <FilePath>.\Src\watchdog.c</FilePath>
             </File>
             <File>
-              <FileName>adc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Inc\adc.h</FilePath>
-            </File>
-            <File>
-              <FileName>lcd.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Inc\lcd.h</FilePath>
-            </File>
-            <File>
-              <FileName>light_control.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Inc\light_control.h</FilePath>
-            </File>
-            <File>
-              <FileName>lora.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Inc\lora.h</FilePath>
-            </File>
-            <File>
-              <FileName>mesh.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Inc\mesh.h</FilePath>
-            </File>
-            <File>
-              <FileName>pwm.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Inc\pwm.h</FilePath>
-            </File>
-            <File>
-              <FileName>spi_driver.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Inc\spi_driver.h</FilePath>
-            </File>
-            <File>
-              <FileName>systick_delay.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Inc\systick_delay.h</FilePath>
-            </File>
-            <File>
-              <FileName>watchdog.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Inc\watchdog.h</FilePath>
-            </File>
-            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>

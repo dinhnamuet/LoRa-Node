@@ -16,15 +16,13 @@
 #include "pwm.h"
 #include "light_control.h"
 const uint32_t NODE_ID = 20021165;
-
 static volatile uint8_t rx_sig = 0;
 char tx_buff[50];
 struct time curTime;
 struct time_set timeSetting;
 struct LoRa_Setup myLoRa;
-extern void SysTick_Handler(void);
 static void get_data(void);
-static uint8_t recv_data[50];
+static uint8_t recv_data[PACKET_SIZE];
 void EXTI2_IRQHandler(void);
 struct LoRa_node myNode;
 
@@ -53,31 +51,7 @@ int main(void)
 	myNode.current = 1.1;
 	myNode.voltage = 3.3;
 	myNode.light_sensor_value = 0;
-	myNode.current_mode = MODE_MANUAL;
-	struct time_set timeSetting = {
-		.h_start_0	= 6,
-		.m_start_0	= 0,
-		.h_stop_0		= 17,
-		.m_stop_0		= 59,
-		
-		.h_start_50	= 18,
-		.m_start_50	= 0,
-		.h_stop_50	= 18,
-		.m_stop_50	= 59,
-		
-		.h_start_75	= 19,
-		.m_start_75	= 0,
-		.h_stop_75		= 21,
-		.m_stop_75		= 59,
-		
-		.h_start_100	= 22,
-		.m_start_100	= 0,
-		.h_stop_100		= 5,
-		.m_stop_100		= 59
-	};
-	curTime.hour		= 6;
-	curTime.minutes = 15;
-	curTime.second	= 30;
+	myNode.current_mode = MODE_AUTO;
 	while(1)
 	{
 		myNode.light_sensor_value = 4096 - read_adc(3);
@@ -120,7 +94,7 @@ static void get_data(void)
 	uint8_t r;
 	memset(tx_buff, 0, sizeof(tx_buff));
 	sprintf(tx_buff, "%d %d %.2f %.2f %d", myNode.light_sensor_value, myNode.illuminance, myNode.voltage, myNode.current, myNode.current_mode);
-	memset(recv_data, 0, 50);
+	memset(recv_data, 0, PACKET_SIZE);
 	r = LoRa_receive(&myLoRa, recv_data, PACKET_SIZE);
 	if(r)
 	{

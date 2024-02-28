@@ -218,7 +218,7 @@ uint8_t LoRa_receive(struct LoRa_Setup *_LoRa, uint8_t *data, uint8_t length)
 		read = LoRa_read(RegFiFoRxCurrentAddr);
 		LoRa_write(RegFiFoAddPtr, read);
 		min = (length >= data_len)?data_len:length;
-		memset(data, 0, 50);
+		memset(data, 0, 60);
 		for(i = 0; i<min; i++)
 			data[i] = LoRa_read(RegFifo);
 	}
