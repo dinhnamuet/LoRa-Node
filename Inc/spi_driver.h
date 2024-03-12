@@ -2,7 +2,7 @@
 #define __SPI_DRIVER_H__
 #include <stdlib.h>
 #include <string.h>
-#include "systick_delay.h"
+#include "delay.h"
 #define F_CLK_SPI_2M 32
 #define F_CLK_SPI_9M 16
 #define set(port,bit) port|=(1U<<bit)

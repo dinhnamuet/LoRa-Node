@@ -41,7 +41,7 @@ static void LoRa_writeReg(uint8_t address, uint8_t output)
 	spi_receive();
 	SS_DISABLE
 }
-static uint8_t LoRa_read(uint8_t address)
+uint8_t LoRa_read(uint8_t address)
 {
 	uint8_t read_data;
 	uint8_t addr;
@@ -49,13 +49,13 @@ static uint8_t LoRa_read(uint8_t address)
 	LoRa_readReg(addr, &read_data);
 	return read_data;
 }
-static void LoRa_write(uint8_t address, uint8_t value)
+void LoRa_write(uint8_t address, uint8_t value)
 {
 	uint8_t addr;
 	addr = address | (1U<<7);
 	LoRa_writeReg(addr, value);
 }
-static void LoRa_gotoMode(struct LoRa_Setup *_LoRa, int mode)
+void LoRa_gotoMode(struct LoRa_Setup *_LoRa, int mode)
 {
 	uint8_t read;
 	uint8_t data;
@@ -81,6 +81,10 @@ static void LoRa_gotoMode(struct LoRa_Setup *_LoRa, int mode)
 		case RXSINGLE_MODE:
 			data = (read & 0xF8) | RXSINGLE_MODE;
 			_LoRa->current_mode = RXSINGLE_MODE;
+			break;
+		case CAD:
+			data = (read & 0xF8) | CAD;
+			_LoRa->current_mode = CAD;
 			break;
 		default:
 			break;

@@ -1,6 +1,6 @@
 #include "adc.h"
 #include "stm32f10x.h"
-#include "systick_delay.h"
+#include "delay.h"
 #define set_bit(port, bit) port|=(1UL<<bit)
 #define reset_bit(port, bit) port&=~(1UL<<bit)
 static void start_adc_conversion(void)

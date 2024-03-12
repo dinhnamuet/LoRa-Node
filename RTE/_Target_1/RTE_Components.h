@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'adc_test' 
+ * Project: 'Light_System' 
  * Target:  'Target 1' 
  */
 

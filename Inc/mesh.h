@@ -1,14 +1,15 @@
 #ifndef __LORA_MESH_H__
 #define __LORA_MESH_H__
 #include <stdint.h>
+#include "lora.h"
 #define GATEWAY_ID 		20021163
 #define BASE_DATA 		10
 #define PACKET_SIZE 	60
+#define QUEUE_SIZE 		4
 
 #define GLOBALIP 		282002
 #define MODE_MANUAL		6
 #define MODE_AUTO		7
-#define FIND_DATA		8
 #define REQUEST_DATA	2
 #define RESPONSE_DATA	3
 
@@ -57,4 +58,6 @@ struct LoRa_node
 };
 #pragma pack()
 void handler_rx_data(uint8_t *buff);
+int mesh_send_pkt(struct LoRa_Setup *_LoRa, struct LoRa_packet pkt);
+void delete_packet_from_queue(uint8_t idx);
 #endif

@@ -1,4 +1,5 @@
 #include "light_control.h"
+#include "motion.h"
 extern struct time curTime;
 extern struct time_set timeSetting;
 uint8_t getDutyCycle_Manual(struct time_set foo)
@@ -106,8 +107,13 @@ uint8_t getDutyCycle_Manual(struct time_set foo)
 }
 uint8_t getDutyCycle_Auto(uint32_t light_sensor)
 {
-	if(light_sensor <= 2000)
-		return 50;
+	if(light_sensor <= 500)
+	{
+		if(get_motion_sensor_value())
+			return 100;
+		else
+			return 20;
+	}
 	else
 		return 0;
 }

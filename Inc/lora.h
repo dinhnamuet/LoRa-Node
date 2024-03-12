@@ -91,8 +91,9 @@ struct LoRa_Setup newLora(void);
 uint8_t LoRa_transmit(struct LoRa_Setup *_LoRa, uint8_t *data, uint8_t length, uint16_t timeout);
 void LoRa_startReceiving(struct LoRa_Setup *_LoRa);
 uint8_t LoRa_receive(struct LoRa_Setup *_LoRa, uint8_t *data, uint8_t length);
-void LoRa_receive_IT(uint8_t *data, uint8_t length);
 int LoRa_getRSSI(void);
 uint16_t LoRa_init(struct LoRa_Setup *_LoRa);
-
+void LoRa_gotoMode(struct LoRa_Setup *_LoRa, int mode);
+uint8_t LoRa_read(uint8_t address);
+void LoRa_write(uint8_t address, uint8_t value);
 #endif

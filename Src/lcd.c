@@ -1,5 +1,5 @@
 #include "lcd.h"
-#include "systick_delay.h"
+#include "delay.h"
 #include <string.h>
 #include <stdlib.h>
 #include "stm32f10x.h"

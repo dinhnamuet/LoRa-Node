@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+".\objects\adc.o"
+".\objects\lcd.o"
+".\objects\light_control.o"
+".\objects\lora.o"
+".\objects\mesh.o"
+".\objects\pwm.o"
+".\objects\spi_driver.o"
+".\objects\watchdog.o"
+".\objects\main.o"
+".\objects\motion.o"
+".\objects\delay.o"
+".\objects\croutine.o"
+".\objects\event_groups.o"
+".\objects\list.o"
+".\objects\queue.o"
+".\objects\tasks.o"
+".\objects\timers.o"
+".\objects\port.o"
+".\objects\heap_1.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--nodebug --strict --scatter ".\Objects\light.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\light.map" -o .\Objects\light.axf

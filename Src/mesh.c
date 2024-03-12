@@ -3,10 +3,13 @@
 #include <stdlib.h>
 #include "mesh.h"
 #include "lora.h"
-#include "systick_delay.h"
-#define QUEUE_SIZE 4
-static struct LoRa_packet packet_queue[QUEUE_SIZE];
-static uint8_t queue_ptr = 0;
+#include "delay.h"
+#include "FreeRTOS.h"
+#include "task.h"
+
+struct LoRa_packet packet_queue[QUEUE_SIZE];
+int queue_ptr = 0;
+
 extern const uint32_t NODE_ID;
 extern struct LoRa_Setup myLoRa;
 extern struct time curTime;
@@ -17,7 +20,6 @@ static uint32_t request_cached	= 0;
 static uint32_t response_cached = 0;
 static uint32_t manual_cached		= 0;
 static uint32_t auto_cached		= 0;
-static uint32_t last_finding = 0;
 static int add_packet_to_queue(struct LoRa_packet packet)
 {
 	int i;
@@ -30,7 +32,7 @@ static int add_packet_to_queue(struct LoRa_packet packet)
 	queue_ptr = (queue_ptr == QUEUE_SIZE - 1) ? 0 : (queue_ptr+1);
 	return 0;
 }
-static void delete_packet_from_queue(uint8_t idx)
+void delete_packet_from_queue(uint8_t idx)
 {
 	int i;
 	for(i = idx; i<QUEUE_SIZE - 1; i++)
@@ -39,16 +41,6 @@ static void delete_packet_from_queue(uint8_t idx)
 	}
 	memset(&packet_queue[QUEUE_SIZE - 1], 0, sizeof(packet_queue[QUEUE_SIZE - 1]));
 	--queue_ptr;
-}
-static uint8_t find_data_index(uint32_t id)
-{
-	int i;
-	for(i = 0; i < QUEUE_SIZE; i++)
-	{
-		if(packet_queue[i].uid == id)
-			return i;
-	}
-	return -1;
 }
 static void format_pkt(struct LoRa_packet pkt, uint8_t *buff)
 {
@@ -74,20 +66,47 @@ static void format_pkt(struct LoRa_packet pkt, uint8_t *buff)
 		buff[BASE_DATA + i] = pkt.data[i];
 	}
 }
-static void mesh_send_pkt(struct LoRa_packet pkt)
+
+int mesh_send_pkt(struct LoRa_Setup *_LoRa, struct LoRa_packet pkt)
 {
+	uint8_t read;
+	int time_set;
+	if(pkt.pkt_type == RESPONSE_DATA)
+		time_set = 3000;
+	else
+		time_set = 1000;
+	int mode = _LoRa->current_mode;
+	LoRa_gotoMode(_LoRa, STANDBY_MODE);
+	delay_ms(1);
+	while(1)
+	{
+		LoRa_gotoMode(_LoRa, CAD);
+		while(!(LoRa_read(RegIrqFlags)>>2 & 0x01))
+		{
+			delay_ms(1);
+		}
+		read = LoRa_read(RegIrqFlags);
+		if(read & 0x01) // cad detected
+		{
+			LoRa_write(RegIrqFlags, 0xFF);
+			vTaskDelay(time_set/portTICK_RATE_MS);
+		}
+		else
+		{
+			LoRa_write(RegIrqFlags, 0xFF);
+			LoRa_gotoMode(&myLoRa, mode);
+			break;
+		}
+	}
 	uint8_t to_send[PACKET_SIZE];
 	format_pkt(pkt, to_send);
 	LoRa_transmit(&myLoRa, to_send, strlen((char *)to_send), 1000);
-}
-static void forward_packet(struct LoRa_packet pkt)
-{
-	mesh_send_pkt(pkt);
+	return 0;
 }
 void handler_rx_data(uint8_t *buff)
 {
 	uint32_t i;
-	uint8_t index;
+	uint8_t flag = 0;
 	struct LoRa_packet foo;
 	struct LoRa_packet newPacket;
 	/* Unpack LoRa packet */
@@ -112,22 +131,38 @@ void handler_rx_data(uint8_t *buff)
 				newPacket.data_length = strlen(tx_buff);
 				memset(newPacket.data, 0, sizeof(newPacket.data));
 				strncpy(newPacket.data, tx_buff, strlen(tx_buff));
-				mesh_send_pkt(newPacket); //sending response
 				add_packet_to_queue(newPacket);
 				response_cached = newPacket.uid;
 				sscanf(foo.data, "%d %d %d", &curTime.hour, &curTime.minutes, &curTime.second); //parse time from data
 			}
 			else if(request_cached != foo.destination_id && foo.destination_id != NODE_ID) // packet for another
 			{
-				forward_packet(foo);
+				for(i = 0; i < queue_ptr; i++)
+				{
+					if(packet_queue[i].pkt_type == RESPONSE_DATA && packet_queue[i].uid == foo.destination_id)
+					{
+						flag = 1;
+						break;
+					}
+				}
+				if(!flag)
+					add_packet_to_queue(foo);
 				sscanf(foo.data, "%d %d %d", &curTime.hour, &curTime.minutes, &curTime.second); //parse time from data
+				flag = 0;
 			}
 			request_cached = foo.destination_id;
 			break;
 		case RESPONSE_DATA:
 			if(foo.uid != response_cached)
 			{
-				forward_packet(foo); //forward data
+				for(i = 0; i < queue_ptr; i++)
+				{
+					if(packet_queue[i].pkt_type == REQUEST_DATA && packet_queue[i].destination_id == foo.uid)
+					{
+						delete_packet_from_queue(i);
+						break;
+					}
+				}			
 				add_packet_to_queue(foo);
 			}
 			response_cached = foo.uid;
@@ -143,7 +178,7 @@ void handler_rx_data(uint8_t *buff)
 			}
 			else if(manual_cached != foo.destination_id && foo.destination_id != NODE_ID) // packet for another
 			{
-				forward_packet(foo);
+				add_packet_to_queue(foo);
 			}
 			manual_cached = foo.destination_id;
 			break;
@@ -154,28 +189,9 @@ void handler_rx_data(uint8_t *buff)
 			}
 			else if(auto_cached != foo.destination_id && foo.destination_id != NODE_ID) // packet for another
 			{
-				forward_packet(foo);
+				add_packet_to_queue(foo);
 			}
 			auto_cached = foo.destination_id;
-			break;
-		case FIND_DATA:
-			//if(foo.destination_id == last_finding)
-				//break;
-			index = find_data_index(foo.destination_id);
-			if(index < 0)
-			{
-				//forward_packet(foo);
-				sscanf(foo.data, "%d %d %d", &curTime.hour, &curTime.minutes, &curTime.second); //parse time from data
-				break;
-			}
-			else
-			{
-				mesh_send_pkt(packet_queue[index]);
-				delete_packet_from_queue(index);
-				response_cached = foo.destination_id;
-			}
-			sscanf(foo.data, "%d %d %d", &curTime.hour, &curTime.minutes, &curTime.second); //parse time from data
-			last_finding = foo.destination_id;
 			break;
 		default:
 			break;

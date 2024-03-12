@@ -1,121 +1,278 @@
 Dependencies for Project 'Light_System', Target 'Target 1': (DO NOT MODIFY !)
-CompilerVersion: 6210000::V6.21::ARMCLANG
-F (.\Src\adc.c)(0x65DD1BC8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Inc-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/Pc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Pc/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/adc.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569BE22)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x65C209DC)
-I (RTE\_Target_1\RTE_Components.h)(0x65C3B41F)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65C20AFE)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6569BE20)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65C209DC)
-I (Inc\systick_delay.h)(0x65C1EFF5)
-F (.\Src\lcd.c)(0x65DD1BC8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Inc-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/Pc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Pc/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/lcd.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h\nc\systick_delay.h)(0x00000000)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x65C209DC)
-I (RTE\_Target_1\RTE_Components.h)(0x65C3B41F)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65C20AFE)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6569BE20)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65C209DC)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569BE22)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6569BE22)
-F (.\Src\light_control.c)(0x65DD1A52)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Inc-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/Pc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Pc/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/light_control.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569BE22)
-F (.\Src\lora.c)(0x65DEED35)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Inc-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/Pc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Pc/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/lora.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569BE22)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6569BE22)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569BE22)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x65C209DC)
-I (RTE\_Target_1\RTE_Components.h)(0x65C3B41F)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65C20AFE)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6569BE20)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65C209DC)
-F (.\Src\mesh.c)(0x65DF68EF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Inc-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/Pc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Pc/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mesh.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569BE22)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6569BE22)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569BE22)
-I (Inc\systick_delay.h)(0x65C1EFF5)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x65C209DC)
-I (RTE\_Target_1\RTE_Components.h)(0x65C3B41F)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65C20AFE)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6569BE20)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65C209DC)
-F (.\Src\pwm.c)(0x65C73FBE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Inc-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/Pc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Pc/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/pwm.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569BE22)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x65C209DC)
-I (RTE\_Target_1\RTE_Components.h)(0x65C3B41F)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65C20AFE)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6569BE20)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65C209DC)
-F (.\Src\spi_driver.c)(0x65D82747)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Inc-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/Pc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Pc/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/spi_driver.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6569BE22)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6569BE22)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569BE22)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x65C209DC)
-I (RTE\_Target_1\RTE_Components.h)(0x65C3B41F)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65C20AFE)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6569BE20)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65C209DC)
-F (.\Src\systick_delay.c)(0x65C1EFF5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Inc-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/Pc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Pc/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/systick_delay.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569BE22)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x65C209DC)
-I (RTE\_Target_1\RTE_Components.h)(0x65C3B41F)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65C20AFE)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6569BE20)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65C209DC)
-F (.\Src\watchdog.c)(0x65DD1BE6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Inc-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/Pc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Pc/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/watchdog.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569BE22)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x65C209DC)
-I (RTE\_Target_1\RTE_Components.h)(0x65C3B41F)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65C20AFE)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6569BE20)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65C209DC)
-I (Inc\systick_delay.h)(0x65C1EFF5)
-F (.\main.c)(0x65DF6982)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./Inc-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/Pc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Pc/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/main.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6569BE22)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6569BE22)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x65C209DC)
-I (RTE\_Target_1\RTE_Components.h)(0x65C3B41F)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65C20AFE)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569BE22)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65C20AFE)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6569BE20)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65C209DC)
-I (Inc\systick_delay.h\nc\lcd.hmnc\adc.henc\watchdog.hDnc\lora.h)(0x00000000)
-I (Inc\mesh.hknc\pwm.h\nc\light_control.h)(0x00000000)
-F (RTE/Device/STM32F103C8/RTE_Device.h)(0x65C1EFF5)()
-F (RTE/Device/STM32F103C8/startup_stm32f10x_md.s)(0x65C1EFF5)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/Pc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Pc/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 539" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f10x_md.o)
-F (RTE/Device/STM32F103C8/system_stm32f10x.c)(0x65C1EFF5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/Pc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Pc/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/system_stm32f10x.o -MD)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x65C209DC)
-I (RTE\_Target_1\RTE_Components.h)(0x65C3B41F)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65C20AFE)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6569BE22)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65C20AFE)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65C20AFE)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6569BE20)
-I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65C209DC)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
+F (.\Src\adc.c)(0x65EFA668)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\adc.o --depend .\objects\adc.d)
+I (.\Inc\adc.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (.\RTE\_Target_1\RTE_Components.h)(0x65ED53C3)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (.\Inc\delay.h)(0x65EFB4C9)
+F (.\Src\lcd.c)(0x65EFA668)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\lcd.o --depend .\objects\lcd.d)
+I (.\Inc\lcd.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (.\Inc\delay.h)(0x65EFB4C9)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (.\RTE\_Target_1\RTE_Components.h)(0x65ED53C3)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5EC78414)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
+F (.\Src\light_control.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\light_control.o --depend .\objects\light_control.d)
+I (.\Inc\light_control.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (.\Inc\mesh.h)(0x65ED53C3)
+I (.\Inc\lora.h)(0x65ED53C3)
+I (.\Inc\motion.h)(0x65EFA876)
+F (.\Src\lora.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\lora.o --depend .\objects\lora.d)
+I (.\Inc\lora.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (.\Inc\spi_driver.h)(0x65EFA68A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5EC78414)
+I (.\Inc\delay.h)(0x65EFB4C9)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (.\RTE\_Target_1\RTE_Components.h)(0x65ED53C3)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+F (.\Src\mesh.c)(0x65EFC0AF)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\mesh.o --depend .\objects\mesh.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5EC78414)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
+I (.\Inc\mesh.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (.\Inc\lora.h)(0x65ED53C3)
+I (.\Inc\delay.h)(0x65EFB4C9)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (.\RTE\_Target_1\RTE_Components.h)(0x65ED53C3)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (.\FreeRTOS\include\FreeRTOS.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
+I (.\FreeRTOS\include\FreeRTOSConfig.h)(0x65ED53C3)
+I (.\FreeRTOS\include\projdefs.h)(0x65ED53C3)
+I (.\FreeRTOS\include\portable.h)(0x65ED53C3)
+I (.\FreeRTOS\include\deprecated_definitions.h)(0x65ED53C3)
+I (.\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h)(0x65ED53C3)
+I (.\FreeRTOS\include\mpu_wrappers.h)(0x65ED53C3)
+I (.\FreeRTOS\include\task.h)(0x65ED53C3)
+I (.\FreeRTOS\include\list.h)(0x65ED53C3)
+F (.\Src\pwm.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\pwm.o --depend .\objects\pwm.d)
+I (.\Inc\pwm.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (.\RTE\_Target_1\RTE_Components.h)(0x65ED53C3)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+F (.\Src\spi_driver.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\spi_driver.o --depend .\objects\spi_driver.d)
+I (.\Inc\spi_driver.h)(0x65EFA68A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5EC78414)
+I (.\Inc\delay.h)(0x65EFB4C9)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (.\RTE\_Target_1\RTE_Components.h)(0x65ED53C3)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+F (.\Src\watchdog.c)(0x65EFA668)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\watchdog.o --depend .\objects\watchdog.d)
+I (.\Inc\watchdog.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (.\RTE\_Target_1\RTE_Components.h)(0x65ED53C3)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (.\Inc\delay.h)(0x65EFB4C9)
+F (.\main.c)(0x65EFC190)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\main.o --depend .\objects\main.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5EC78414)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (.\RTE\_Target_1\RTE_Components.h)(0x65ED53C3)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+I (.\Inc\delay.h)(0x65EFB4C9)
+I (.\Inc\lcd.h)(0x65ED53C3)
+I (.\Inc\adc.h)(0x65ED53C3)
+I (.\Inc\watchdog.h)(0x65ED53C3)
+I (.\Inc\lora.h)(0x65ED53C3)
+I (.\Inc\mesh.h)(0x65ED53C3)
+I (.\Inc\pwm.h)(0x65ED53C3)
+I (.\Inc\light_control.h)(0x65ED53C3)
+I (.\Inc\motion.h)(0x65EFA876)
+I (FreeRTOS/include/FreeRTOS.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
+I (FreeRTOS/include/FreeRTOSConfig.h)(0x65ED53C3)
+I (FreeRTOS/include/projdefs.h)(0x65ED53C3)
+I (FreeRTOS/include/portable.h)(0x65ED53C3)
+I (FreeRTOS/include/deprecated_definitions.h)(0x65ED53C3)
+I (.\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h)(0x65ED53C3)
+I (FreeRTOS/include/mpu_wrappers.h)(0x65ED53C3)
+I (FreeRTOS/include/task.h)(0x65ED53C3)
+I (FreeRTOS/include/list.h)(0x65ED53C3)
+F (.\Src\motion.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\motion.o --depend .\objects\motion.d)
+I (.\Inc\motion.h)(0x65EFA876)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (.\RTE\_Target_1\RTE_Components.h)(0x65ED53C3)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+F (.\Src\delay.c)(0x65EFB4D3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\delay.o --depend .\objects\delay.d)
+I (.\Inc\delay.h)(0x65EFB4C9)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (.\RTE\_Target_1\RTE_Components.h)(0x65ED53C3)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
+F (.\FreeRTOS\croutine.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\croutine.o --depend .\objects\croutine.d)
+I (.\FreeRTOS\include\FreeRTOS.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (.\FreeRTOS\include\FreeRTOSConfig.h)(0x65ED53C3)
+I (.\FreeRTOS\include\projdefs.h)(0x65ED53C3)
+I (.\FreeRTOS\include\portable.h)(0x65ED53C3)
+I (.\FreeRTOS\include\deprecated_definitions.h)(0x65ED53C3)
+I (.\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h)(0x65ED53C3)
+I (.\FreeRTOS\include\mpu_wrappers.h)(0x65ED53C3)
+I (.\FreeRTOS\include\task.h)(0x65ED53C3)
+I (.\FreeRTOS\include\list.h)(0x65ED53C3)
+I (.\FreeRTOS\include\croutine.h)(0x65ED53C3)
+F (.\FreeRTOS\event_groups.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\event_groups.o --depend .\objects\event_groups.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
+I (.\FreeRTOS\include\FreeRTOS.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (.\FreeRTOS\include\FreeRTOSConfig.h)(0x65ED53C3)
+I (.\FreeRTOS\include\projdefs.h)(0x65ED53C3)
+I (.\FreeRTOS\include\portable.h)(0x65ED53C3)
+I (.\FreeRTOS\include\deprecated_definitions.h)(0x65ED53C3)
+I (.\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h)(0x65ED53C3)
+I (.\FreeRTOS\include\mpu_wrappers.h)(0x65ED53C3)
+I (.\FreeRTOS\include\task.h)(0x65ED53C3)
+I (.\FreeRTOS\include\list.h)(0x65ED53C3)
+I (.\FreeRTOS\include\timers.h)(0x65ED53C3)
+I (.\FreeRTOS\include\event_groups.h)(0x65ED53C3)
+F (.\FreeRTOS\list.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\list.o --depend .\objects\list.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
+I (.\FreeRTOS\include\FreeRTOS.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (.\FreeRTOS\include\FreeRTOSConfig.h)(0x65ED53C3)
+I (.\FreeRTOS\include\projdefs.h)(0x65ED53C3)
+I (.\FreeRTOS\include\portable.h)(0x65ED53C3)
+I (.\FreeRTOS\include\deprecated_definitions.h)(0x65ED53C3)
+I (.\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h)(0x65ED53C3)
+I (.\FreeRTOS\include\mpu_wrappers.h)(0x65ED53C3)
+I (.\FreeRTOS\include\list.h)(0x65ED53C3)
+F (.\FreeRTOS\queue.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\queue.o --depend .\objects\queue.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5EC78414)
+I (.\FreeRTOS\include\FreeRTOS.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (.\FreeRTOS\include\FreeRTOSConfig.h)(0x65ED53C3)
+I (.\FreeRTOS\include\projdefs.h)(0x65ED53C3)
+I (.\FreeRTOS\include\portable.h)(0x65ED53C3)
+I (.\FreeRTOS\include\deprecated_definitions.h)(0x65ED53C3)
+I (.\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h)(0x65ED53C3)
+I (.\FreeRTOS\include\mpu_wrappers.h)(0x65ED53C3)
+I (.\FreeRTOS\include\task.h)(0x65ED53C3)
+I (.\FreeRTOS\include\list.h)(0x65ED53C3)
+I (.\FreeRTOS\include\queue.h)(0x65ED53C3)
+F (.\FreeRTOS\tasks.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\tasks.o --depend .\objects\tasks.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5EC78414)
+I (.\FreeRTOS\include\FreeRTOS.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (.\FreeRTOS\include\FreeRTOSConfig.h)(0x65ED53C3)
+I (.\FreeRTOS\include\projdefs.h)(0x65ED53C3)
+I (.\FreeRTOS\include\portable.h)(0x65ED53C3)
+I (.\FreeRTOS\include\deprecated_definitions.h)(0x65ED53C3)
+I (.\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h)(0x65ED53C3)
+I (.\FreeRTOS\include\mpu_wrappers.h)(0x65ED53C3)
+I (.\FreeRTOS\include\task.h)(0x65ED53C3)
+I (.\FreeRTOS\include\list.h)(0x65ED53C3)
+I (.\FreeRTOS\include\timers.h)(0x65ED53C3)
+I (.\FreeRTOS\include\StackMacros.h)(0x65ED53C3)
+F (.\FreeRTOS\timers.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\timers.o --depend .\objects\timers.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
+I (.\FreeRTOS\include\FreeRTOS.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (.\FreeRTOS\include\FreeRTOSConfig.h)(0x65ED53C3)
+I (.\FreeRTOS\include\projdefs.h)(0x65ED53C3)
+I (.\FreeRTOS\include\portable.h)(0x65ED53C3)
+I (.\FreeRTOS\include\deprecated_definitions.h)(0x65ED53C3)
+I (.\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h)(0x65ED53C3)
+I (.\FreeRTOS\include\mpu_wrappers.h)(0x65ED53C3)
+I (.\FreeRTOS\include\task.h)(0x65ED53C3)
+I (.\FreeRTOS\include\list.h)(0x65ED53C3)
+I (.\FreeRTOS\include\queue.h)(0x65ED53C3)
+I (.\FreeRTOS\include\timers.h)(0x65ED53C3)
+F (.\FreeRTOS\portable\RVDS\ARM_CM3\port.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\port.o --depend .\objects\port.d)
+I (.\FreeRTOS\include\FreeRTOS.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (.\FreeRTOS\include\FreeRTOSConfig.h)(0x65ED53C3)
+I (.\FreeRTOS\include\projdefs.h)(0x65ED53C3)
+I (.\FreeRTOS\include\portable.h)(0x65ED53C3)
+I (.\FreeRTOS\include\deprecated_definitions.h)(0x65ED53C3)
+I (.\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h)(0x65ED53C3)
+I (.\FreeRTOS\include\mpu_wrappers.h)(0x65ED53C3)
+I (.\FreeRTOS\include\task.h)(0x65ED53C3)
+I (.\FreeRTOS\include\list.h)(0x65ED53C3)
+F (.\FreeRTOS\portable\MemMang\heap_1.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\heap_1.o --depend .\objects\heap_1.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
+I (.\FreeRTOS\include\FreeRTOS.h)(0x65ED53C3)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (.\FreeRTOS\include\FreeRTOSConfig.h)(0x65ED53C3)
+I (.\FreeRTOS\include\projdefs.h)(0x65ED53C3)
+I (.\FreeRTOS\include\portable.h)(0x65ED53C3)
+I (.\FreeRTOS\include\deprecated_definitions.h)(0x65ED53C3)
+I (.\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h)(0x65ED53C3)
+I (.\FreeRTOS\include\mpu_wrappers.h)(0x65ED53C3)
+I (.\FreeRTOS\include\task.h)(0x65ED53C3)
+I (.\FreeRTOS\include\list.h)(0x65ED53C3)
+F (RTE\Device\STM32F103C8\RTE_Device.h)(0x65ED53C3)()
+F (RTE\Device\STM32F103C8\startup_stm32f10x_md.s)(0x65ED53C3)(--cpu Cortex-M3 --apcs=interwork -I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include--pd "__UVISION_VERSION SETA 531" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1" --pd "_RTE_ SETA 1"--list .\listings\startup_stm32f10x_md.lst --xref -o .\objects\startup_stm32f10x_md.o --depend .\objects\startup_stm32f10x_md.d)
+F (RTE\Device\STM32F103C8\system_stm32f10x.c)(0x65ED53C3)(--c99 --gnu -c --cpu Cortex-M3 -O0 --apcs=interwork --split_sections -I .\Inc -I .\FreeRTOS\portable\RVDS\ARM_CM3 -I .\FreeRTOS\include -I C:\Users\Pc\Downloads\LoRa-Node\Inc-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o .\objects\system_stm32f10x.o --depend .\objects\system_stm32f10x.d)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
+I (.\RTE\_Target_1\RTE_Components.h)(0x65ED53C3)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h)(0x5E8EDF32)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8314D2)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8EDF32)
+I (C:\Users\Pc\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
