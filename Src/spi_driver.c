@@ -51,7 +51,6 @@ void spi_send_single_byte(uint8_t data)
 }
 void spi_send_buffer(uint8_t *tx_buffer)
 {
-	uint32_t i = 0;
 	SS_ENABLE
 	while(*tx_buffer)
 	{
@@ -62,7 +61,6 @@ void spi_send_buffer(uint8_t *tx_buffer)
 }
 void spi_send_buffer_soft(uint8_t *tx_buffer)
 {
-	uint32_t i = 0;
 	while(*tx_buffer)
 	{
 		spi_send_data(*tx_buffer++);

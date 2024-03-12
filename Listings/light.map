@@ -1756,7 +1756,7 @@ Image Symbol Table
     read_adc                                 0x08003b09   Thumb Code    72  adc.o(i.read_adc)
     spi_master_init                          0x08003d0d   Thumb Code   264  spi_driver.o(i.spi_master_init)
     spi_receive                              0x08003e25   Thumb Code    36  spi_driver.o(i.spi_receive)
-    spi_send_buffer_soft                     0x08003e4d   Thumb Code    28  spi_driver.o(i.spi_send_buffer_soft)
+    spi_send_buffer_soft                     0x08003e4d   Thumb Code    26  spi_driver.o(i.spi_send_buffer_soft)
     spi_send_data                            0x08003e69   Thumb Code    36  spi_driver.o(i.spi_send_data)
     uxListRemove                             0x08003ec9   Thumb Code    40  list.o(i.uxListRemove)
     vListInitialise                          0x08003ef1   Thumb Code    26  list.o(i.vListInitialise)
@@ -2028,7 +2028,8 @@ Memory Map of the image
     0x08003cc0   0x08003cc0   0x0000004c   Code   RO            8    i.set_channel       adc.o
     0x08003d0c   0x08003d0c   0x00000118   Code   RO           66    i.spi_master_init   spi_driver.o
     0x08003e24   0x08003e24   0x00000028   Code   RO           67    i.spi_receive       spi_driver.o
-    0x08003e4c   0x08003e4c   0x0000001c   Code   RO           69    i.spi_send_buffer_soft  spi_driver.o
+    0x08003e4c   0x08003e4c   0x0000001a   Code   RO           69    i.spi_send_buffer_soft  spi_driver.o
+    0x08003e66   0x08003e66   0x00000002   PAD
     0x08003e68   0x08003e68   0x00000028   Code   RO           70    i.spi_send_data     spi_driver.o
     0x08003e90   0x08003e90   0x00000038   Code   RO            9    i.start_adc_conversion  adc.o
     0x08003ec8   0x08003ec8   0x00000028   Code   RO          110    i.uxListRemove      list.o
@@ -2112,7 +2113,7 @@ Image component sizes
         72         16          0          0          0          0   motion.o
        394         56          0          4          0          0   port.o
        194         12          0          0          0          0   pwm.o
-       388         24          0          0          0          0   spi_driver.o
+       386         24          0          0          0          0   spi_driver.o
         64         26        236          0       1536          0   startup_stm32f10x_md.o
        328         28          0         20          0          0   system_stm32f10x.o
       1568        252          0         56        200          0   tasks.o
@@ -2121,7 +2122,7 @@ Image component sizes
     ----------------------------------------------------------------------
       9140        906        272        116      19600          0   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        14          0          0          3          1          0   (incl. Padding)
+        16          0          0          3          1          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
