@@ -23,7 +23,7 @@
 extern struct LoRa_packet packet_queue[QUEUE_SIZE];
 extern int queue_ptr;
 
-const uint32_t NODE_ID = 20021165;
+const uint32_t NODE_ID = 20021164;
 static volatile uint8_t rx_sig = 0;
 char tx_buff[50];
 struct time curTime;
@@ -130,7 +130,7 @@ static void sendData(void *args)
 {
 	while(1)
 	{
-		if(queue_ptr > 0)
+		if(queue_ptr)
 		{
 			mesh_send_pkt(&myLoRa, packet_queue[0]);
 			delete_packet_from_queue(0);

@@ -29,7 +29,7 @@ static int add_packet_to_queue(struct LoRa_packet packet)
 			return -1;
 	}
 	packet_queue[queue_ptr] = packet;
-	queue_ptr = (queue_ptr == QUEUE_SIZE - 1) ? 0 : (queue_ptr+1);
+	queue_ptr = (queue_ptr == QUEUE_SIZE - 1) ? queue_ptr : (queue_ptr+1);
 	return 0;
 }
 void delete_packet_from_queue(uint8_t idx)
@@ -40,7 +40,7 @@ void delete_packet_from_queue(uint8_t idx)
 		packet_queue[i] = packet_queue[i+1];
 	}
 	memset(&packet_queue[QUEUE_SIZE - 1], 0, sizeof(packet_queue[QUEUE_SIZE - 1]));
-	--queue_ptr;
+	queue_ptr = (queue_ptr <=  0) ? 0 : (queue_ptr-1);
 }
 static void format_pkt(struct LoRa_packet pkt, uint8_t *buff)
 {

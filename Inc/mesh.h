@@ -5,7 +5,7 @@
 #define GATEWAY_ID 		20021163
 #define BASE_DATA 		10
 #define PACKET_SIZE 	60
-#define QUEUE_SIZE 		4
+#define QUEUE_SIZE 		8
 
 #define GLOBALIP 		282002
 #define MODE_MANUAL		6
